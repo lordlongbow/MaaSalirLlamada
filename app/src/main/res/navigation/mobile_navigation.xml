@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="usuario.example.tpanexoa.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="usuario.example.tpanexoa.ui.gallery.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="usuario.example.tpanexoa.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_ubicacionFragment"
+        android:name="usuario.example.tpanexoa.ui.miUbicacion.UbicacionFragment"
+        android:label="fragment_ubicacion"
+        tools:layout="@layout/fragment_ubicacion" >
+        <action
+            android:id="@+id/action_nav_ubicacionFragment_to_nav_miUbicacionFragment"
+            app:destination="@id/nav_miUbicacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_miUbicacionFragment"
+        android:name="usuario.example.tpanexoa.ui.miUbicacion.MiUbicacionFragment"
+        android:label="fragment_mi_ubicacion"
+        tools:layout="@layout/fragment_mi_ubicacion" >
+        <action
+            android:id="@+id/action_nav_miUbicacionFragment_to_nav_ubicacionFragment"
+            app:destination="@id/nav_ubicacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_llamarFragment"
+        android:name="usuario.example.tpanexoa.ui.llamar.LlamarFragment"
+        android:label="LlamarFragment" />
+    <fragment
+        android:id="@+id/nav_salirFragment"
+        android:name="usuario.example.tpanexoa.ui.salir.SalirFragment"
+        android:label="fragment_salir"
+        tools:layout="@layout/fragment_salir" />
+
+
+</navigation>
